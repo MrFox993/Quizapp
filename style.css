@@ -1,0 +1,19 @@
+.split-screen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.startup-bg {
+    background-image: url(./Quizapp_Design/brainbg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 269px !important;
+}
+
+.bg-dark-catagory {
+    background-color: #27355C !important;
+    color: white !important;
+}
+

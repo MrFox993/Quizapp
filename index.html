@@ -1,13 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/standard.css" />
     <script src="./script.js"></script>
-</head>
-<body>
-    
-</body>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">Quizapp</span>
+      </div>
+    </nav>
+    <div class="container centralized h-94dvh">
+    <div class="card">
+      <div class="card-body">
+        <div class="split-screen">
+          <div class="card bg-dark-catagory p-3">
+            <img src="./Quizapp_Design/logo.png" class="card-img-top pb-3" alt="logo">
+            <div class="card">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-dark-catagory">HTML</li>
+                <li class="list-group-item bg-dark-catagory">CSS</li>
+                <li class="list-group-item bg-dark-catagory">JavaScript</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card startup-bg centralized p-3">
+            <h5> Welcome to the <br> Quiz App!</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
 </html>

@@ -6,7 +6,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./styles/standard.css" />
+    <script src="./scripts/db.js"></script>
     <script src="./script.js"></script>
+    <script src="./scripts/templates.js"></script>
     <!-- bootstrap -->
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -18,25 +20,38 @@
       </div>
     </nav>
     <div class="container centralized h-94dvh">
-    <div class="card">
-      <div class="card-body">
-        <div class="split-screen">
-          <div class="card bg-dark-catagory p-3">
-            <img src="./Quizapp_Design/logo.png" class="card-img-top pb-3" alt="logo">
-            <div class="card">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item bg-dark-catagory">HTML</li>
-                <li class="list-group-item bg-dark-catagory">CSS</li>
-                <li class="list-group-item bg-dark-catagory">JavaScript</li>
-              </ul>
+      <div class="card">
+        <div class="card-body">
+          <div class="split-screen">
+            <div class="card bg-dark-catagory p-3">
+              <img src="./Quizapp_Design/logo.png" class="card-img-top pb-3" alt="logo" />
+              <div class="card">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item bg-dark-catagory">
+                    <button type="button" onclick="startQuiz(0)" class="bg-dark-catagory">HTML</button>
+                  </li>
+                  <li class="list-group-item bg-dark-catagory">
+                    <button type="button" onclick="startQuiz(1)" class="bg-dark-catagory">CSS</button>
+                  </li>
+                  <li class="list-group-item bg-dark-catagory">
+                    <button type="button" onclick="startQuiz(2)" class="bg-dark-catagory">
+                      JavaScript
+                    </button>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="card startup-bg centralized p-3">
-            <h5> Welcome to the <br> Quiz App!</h5>
+            <div class="card startup-bg centralized p-3">
+              <div id="quiz-content">
+                <h5>
+                  Welcome to the <br />
+                  Quiz App!
+                </h5>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
   </body>
 </html>

@@ -9,11 +9,10 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 301px !important;
+    min-height: 301px;
 }
 
 .bg-dark-catagory {
     background-color: #27355C !important;
     color: white !important;
 }
-

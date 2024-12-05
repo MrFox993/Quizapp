@@ -16,3 +16,13 @@
     background-color: #27355C !important;
     color: white !important;
 }
+
+.quiz-answer-card:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.quiz-answer-card:disabled {
+    cursor: not-allowed;
+    
+}

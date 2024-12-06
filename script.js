@@ -28,15 +28,17 @@ function startQuiz(topicIndex) {
 function renderQuizContent(topicIndex, topic) {
   let quizContentRef = document.getElementById("quiz-content");
   let questionIndex = 0;
-//   quizContentRef.innerHTML = "";
+  //   quizContentRef.innerHTML = "";
   quizContentRef.innerHTML = getQuizContentHTMLTemplate(topicIndex, questionIndex, topic);
+  renderCurrentQuestionNumber(questionIndex);
 }
 
 function nextQuestion(topicIndex, questionIndex) {
   let quizContentRef = document.getElementById("quiz-content");
-  let topic = document.getElementById('quiz-content-header').innerHTML;
-  questionIndex++ ;
+  let topic = document.getElementById("quiz-content-header").innerHTML;
+  questionIndex++;
   quizContentRef.innerHTML = getQuizContentHTMLTemplate(topicIndex, questionIndex, topic);
+  renderCurrentQuestionNumber(questionIndex);
 }
 
 function previousQuestion(index, questionIndex, topic) {}
@@ -53,4 +55,10 @@ function selectAnswer(index, questionIndex, answer_index) {
     correctAnswerRef.classList.add("bg-success");
   }
   nextQuestionButtonRef.disabled = false;
+}
+
+function renderCurrentQuestionNumber(questionIndex) {
+  let currentQuestionNumberRef = document.getElementById("current-question-index");
+  let currentQuestionNumber = questionIndex + 1;
+  currentQuestionNumberRef.innerHTML = currentQuestionNumber;
 }

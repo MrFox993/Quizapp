@@ -37,8 +37,13 @@ function nextQuestion(topicIndex, questionIndex) {
   let quizContentRef = document.getElementById("quiz-content");
   let topic = document.getElementById("quiz-content-header").innerHTML;
   questionIndex++;
-  if (questionIndex >= questions[topicIndex].length){
-    // ToDo: End Screen
+  if (questionIndex >= questions[topicIndex].length) {
+    let endscreenRef = document.getElementById('endscreen');
+    document.getElementById("quiz-content").style = "display:none;";
+    endscreenRef.parentNode.classList.remove('startup-bg')
+    endscreenRef.style = "flex-direction:column;";
+    endscreenRef.classList.add('centralized')
+    endscreenRef.innerHTML = getQuizResultHTMLTemplate(topic);
   } else {
     quizContentRef.innerHTML = getQuizContentHTMLTemplate(topicIndex, questionIndex, topic);
     renderCurrentQuestionNumber(questionIndex);

@@ -1,5 +1,5 @@
 function getQuizContentHTMLTemplate(topicIndex, questionIndex, topic) {
-    return `
+  return `
             <div>
             <h4 id="quiz-content-header">${topic}</h4>
             <h5 id="quiz-content-question">${questions[topicIndex][questionIndex].question}</h5>
@@ -27,5 +27,14 @@ function getQuizContentHTMLTemplate(topicIndex, questionIndex, topic) {
             </ul>
             </nav>
         </div>
+    `;
+}
+
+function getQuizResultHTMLTemplate(topic) {
+  return `
+        <img src="./Quizapp_Design/brain result.png" alt="" />
+        <h5>Complete ${topic} Quiz</h5>
+        <b id="score-result">Your Score</b>
+        <button onclick="replayQuiz()">Replay</button>
     `;
 }

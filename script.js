@@ -37,8 +37,12 @@ function nextQuestion(topicIndex, questionIndex) {
   let quizContentRef = document.getElementById("quiz-content");
   let topic = document.getElementById("quiz-content-header").innerHTML;
   questionIndex++;
-  quizContentRef.innerHTML = getQuizContentHTMLTemplate(topicIndex, questionIndex, topic);
-  renderCurrentQuestionNumber(questionIndex);
+  if (questionIndex >= questions[topicIndex].length){
+    // ToDo: End Screen
+  } else {
+    quizContentRef.innerHTML = getQuizContentHTMLTemplate(topicIndex, questionIndex, topic);
+    renderCurrentQuestionNumber(questionIndex);
+  }
 }
 
 function previousQuestion(index, questionIndex, topic) {}

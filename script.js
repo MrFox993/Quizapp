@@ -1,22 +1,22 @@
 let topic;
 
-function startQuiz(index) {
+function startQuiz(topicIndex) {
   let quizContentRef = document.getElementById("quiz-content");
   quizContentRef.innerHTML = "";
-  switch (index) {
+  switch (topicIndex) {
     case 0:
       topic = "HTML";
-      renderQuizContent(index, topic);
+      renderQuizContent(topicIndex, topic);
       break;
 
     case 1:
       topic = "CSS";
-      renderQuizContent(index, topic);
+      renderQuizContent(topicIndex, topic);
       break;
 
     case 2:
       topic = "JavaScript";
-      renderQuizContent(index, topic);
+      renderQuizContent(topicIndex, topic);
       break;
 
     default:
@@ -25,38 +25,32 @@ function startQuiz(index) {
   }
 }
 
-function renderQuizContent(index, topic) {
+function renderQuizContent(topicIndex, topic) {
   let quizContentRef = document.getElementById("quiz-content");
   let questionIndex = 0;
-  quizContentRef.innerHTML = "";
-  quizContentRef.innerHTML = getQuizContentHTMLTemplate(index, questionIndex, topic);
+//   quizContentRef.innerHTML = "";
+  quizContentRef.innerHTML = getQuizContentHTMLTemplate(topicIndex, questionIndex, topic);
 }
 
-function nextQuestion(index, questionIndex, topic) {
-  console.table(index, questionIndex, topic);
-  let newQuestionIndex = questionIndex + 1;
+function nextQuestion(topicIndex, questionIndex) {
   let quizContentRef = document.getElementById("quiz-content");
-  quizContentRef.innerHTML = "";
-  quizContentRef.innerHTML = getQuizContentHTMLTemplate(index, newQuestionIndex, topic);
+  let topic = document.getElementById('quiz-content-header').innerHTML;
+  questionIndex++ ;
+  quizContentRef.innerHTML = getQuizContentHTMLTemplate(topicIndex, questionIndex, topic);
 }
 
-function previousQuestion(index, questionIndex, topic) {
-  let newQuestionIndex = questionIndex - 1;
-  let quizContentRef = document.getElementById("quiz-content");
-  quizContentRef.innerHTML = "";
-  quizContentRef.innerHTML = getQuizContentHTMLTemplate(index, newQuestionIndex, topic);
-}
+function previousQuestion(index, questionIndex, topic) {}
 
 function selectAnswer(index, questionIndex, answer_index) {
   let correctAnswer = questions[index][questionIndex].correctAnswer;
   let chosenAnswerRef = document.getElementById(`quiz-content-answer-${answer_index}`);
   let correctAnswerRef = document.getElementById(`quiz-content-answer-${correctAnswer}`);
-  let nextQuestionButtonRef = document.getElementById('next-question-button')
+  let nextQuestionButtonRef = document.getElementById("next-question-button");
   if (correctAnswer === answer_index) {
     chosenAnswerRef.classList.add("bg-success");
   } else {
     chosenAnswerRef.classList.add("bg-danger");
-    correctAnswerRef.classList.add("bg-success")
+    correctAnswerRef.classList.add("bg-success");
   }
-  nextQuestionButtonRef.disabled = false
+  nextQuestionButtonRef.disabled = false;
 }

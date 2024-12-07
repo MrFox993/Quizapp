@@ -13,10 +13,6 @@ function getQuizContentHTMLTemplate(topicIndex, questionIndex, topic) {
             </div>
             <nav aria-label="Page navigation example">
             <ul class="pagination centralized">
-                <li class="page-item">
-                <button class="page-link quiz-answer-card" onclick="previousQuestion(${topicIndex}, ${questionIndex}, ${topic})" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                </button>
                 </li>
                 <b id="current-question-index">number</b> / <b id="max-question-index">${questions[topicIndex].length}</b>
                 <li class="page-item">

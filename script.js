@@ -52,8 +52,6 @@ function nextQuestion(topicIndex, questionIndex) {
   }
 }
 
-function previousQuestion(index, questionIndex, topic) {}
-
 function selectAnswer(index, questionIndex, answer_index) {
   let correctAnswer = questions[index][questionIndex].correctAnswer;
   let chosenAnswerRef = document.getElementById(`quiz-content-answer-${answer_index}`);

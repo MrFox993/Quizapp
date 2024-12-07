@@ -1,8 +1,10 @@
 let topic;
+let correctAnswers = 0;
 
 function startQuiz(topicIndex) {
   let quizContentRef = document.getElementById("quiz-content");
   quizContentRef.innerHTML = "";
+  correctAnswers = 0;
   switch (topicIndex) {
     case 0:
       topic = "HTML";
@@ -43,7 +45,7 @@ function nextQuestion(topicIndex, questionIndex) {
     endscreenRef.parentNode.classList.remove('startup-bg')
     endscreenRef.style = "flex-direction:column;";
     endscreenRef.classList.add('centralized')
-    endscreenRef.innerHTML = getQuizResultHTMLTemplate(topic);
+    endscreenRef.innerHTML = getQuizResultHTMLTemplate(topic, topicIndex);
   } else {
     quizContentRef.innerHTML = getQuizContentHTMLTemplate(topicIndex, questionIndex, topic);
     renderCurrentQuestionNumber(questionIndex);
@@ -59,6 +61,7 @@ function selectAnswer(index, questionIndex, answer_index) {
   let nextQuestionButtonRef = document.getElementById("next-question-button");
   if (correctAnswer === answer_index) {
     chosenAnswerRef.classList.add("bg-success");
+    correctAnswers++;
   } else {
     chosenAnswerRef.classList.add("bg-danger");
     correctAnswerRef.classList.add("bg-success");

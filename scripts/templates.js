@@ -30,11 +30,11 @@ function getQuizContentHTMLTemplate(topicIndex, questionIndex, topic) {
     `;
 }
 
-function getQuizResultHTMLTemplate(topic) {
+function getQuizResultHTMLTemplate(topic, topicIndex) {
   return `
         <img src="./Quizapp_Design/brain result.png" alt="" />
         <h5>Complete ${topic} Quiz</h5>
-        <b id="score-result">Your Score</b>
+        <div> Your Score: <b>${correctAnswers}</b> / <b>${questions[topicIndex].length}</b>
         <button onclick="replayQuiz()">Replay</button>
     `;
 }

@@ -34,3 +34,36 @@ function getQuizResultHTMLTemplate(topic, topicIndex) {
         <button onclick="replayQuiz()">Replay</button>
     `;
 }
+
+function getMainScreenHTMLTemplate() {
+    return `
+        <div class="split-screen h-w-wfa">
+        <div class="card bg-dark-catagory p-3 h-w-wfa">
+        <img src="./Quizapp_Design/logo.png" class="card-img-top pb-3" alt="logo" />
+        <div class="card">
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item bg-dark-catagory">
+                <button type="button" onclick="startQuiz(0)" class="bg-dark-catagory">HTML</button>
+            </li>
+            <li class="list-group-item bg-dark-catagory">
+                <button type="button" onclick="startQuiz(1)" class="bg-dark-catagory">CSS</button>
+            </li>
+            <li class="list-group-item bg-dark-catagory">
+                <button type="button" onclick="startQuiz(2)" class="bg-dark-catagory">JavaScript</button>
+            </li>
+            </ul>
+        </div>
+        </div>
+        <div class="card startup-bg centralized p-3 h-w-wfa">
+        <div id="endscreen" style="display: none">
+        </div>
+        <div id="quiz-content">
+            <h5>
+            Welcome to the <br />
+            Quiz App!
+            </h5>
+        </div>
+        </div>
+    </div>
+    `;
+}

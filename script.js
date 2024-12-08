@@ -72,3 +72,13 @@ function renderCurrentQuestionNumber(questionIndex) {
   let currentQuestionNumber = questionIndex + 1;
   currentQuestionNumberRef.innerHTML = currentQuestionNumber;
 }
+
+function renderStartScreen() {
+    let quizMainScreen = document.getElementById('main-content');
+    quizMainScreen.innerHTML = getMainScreenHTMLTemplate();
+}
+
+function replayQuiz() {
+    correctAnswers = 0;
+    renderStartScreen()
+}

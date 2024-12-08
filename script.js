@@ -40,11 +40,11 @@ function nextQuestion(topicIndex, questionIndex) {
   let topic = document.getElementById("quiz-content-header").innerHTML;
   questionIndex++;
   if (questionIndex >= questions[topicIndex].length) {
-    let endscreenRef = document.getElementById('endscreen');
+    let endscreenRef = document.getElementById("endscreen");
     document.getElementById("quiz-content").style = "display:none;";
-    endscreenRef.parentNode.classList.remove('startup-bg')
+    endscreenRef.parentNode.classList.remove("startup-bg");
     endscreenRef.style = "flex-direction:column;";
-    endscreenRef.classList.add('centralized')
+    endscreenRef.classList.add("centralized");
     endscreenRef.innerHTML = getQuizResultHTMLTemplate(topic, topicIndex);
   } else {
     quizContentRef.innerHTML = getQuizContentHTMLTemplate(topicIndex, questionIndex, topic);
@@ -74,11 +74,11 @@ function renderCurrentQuestionNumber(questionIndex) {
 }
 
 function renderStartScreen() {
-    let quizMainScreen = document.getElementById('main-content');
-    quizMainScreen.innerHTML = getMainScreenHTMLTemplate();
+  let quizMainScreen = document.getElementById("main-content");
+  quizMainScreen.innerHTML = getMainScreenHTMLTemplate();
 }
 
 function replayQuiz() {
-    correctAnswers = 0;
-    renderStartScreen()
+  correctAnswers = 0;
+  renderStartScreen();
 }

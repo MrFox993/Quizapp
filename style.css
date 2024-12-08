@@ -1,28 +1,27 @@
 .split-screen {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .startup-bg {
-    background-image: url(./Quizapp_Design/brainbg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 301px;
+  background-image: url(./Quizapp_Design/brainbg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 301px;
 }
 
 .bg-dark-catagory {
-    background-color: #27355C !important;
-    color: white !important;
+  background-color: #27355c !important;
+  color: white !important;
 }
 
 .quiz-answer-card:hover {
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .quiz-answer-card:disabled {
-    cursor: not-allowed;
-    
+  cursor: not-allowed;
 }

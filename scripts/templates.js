@@ -36,7 +36,7 @@ function getQuizResultHTMLTemplate(topic, topicIndex) {
 }
 
 function getMainScreenHTMLTemplate() {
-    return `
+  return `
         <div class="split-screen h-w-wfa">
         <div class="card bg-dark-catagory p-3 h-w-wfa">
         <img src="./Quizapp_Design/logo.png" class="card-img-top pb-3" alt="logo" />
